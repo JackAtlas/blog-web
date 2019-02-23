@@ -1,0 +1,63 @@
+* {
+  box-sizing: inherit;
+}
+
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  transition: max-width .3s cubic-bezier(.4, 0, .2, 1);
+
+  @media screen and (min-width: 800px) {
+    max-width: 760px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 960px;
+  }
+}
+
+.f-l {
+  float: left;
+}
+
+.f-r {
+  float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
