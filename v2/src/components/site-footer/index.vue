@@ -2,7 +2,8 @@
   <footer>
     <div class="container footer">
       <div class="copyright">Copyright &copy; JackAtlas.xyz 2021</div>
-      <div class="made"><a href="https://github.com/JackAtlas" _target="_blank">Made with <span class="heart">❤</span> by JackAtlas</a></div>
+      <div class="beian"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备2021151465号</a></div>
+      <div class="made"><a href="https://github.com/JackAtlas" _target="_blank" rel="noopener noreferrer">Made with <span class="heart">❤</span> by JackAtlas</a></div>
     </div>
   </footer>
 </template>
@@ -27,6 +28,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 60px;
+    font-size: .875em;
   }
 }
 
