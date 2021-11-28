@@ -26,6 +26,11 @@ export default createRouter({
       component: () => import('./views/blog/post/index.vue')
     },
     {
+      path: '/demo',
+      name: 'Demo',
+      component: () => import('./views/demo/index.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: () => import('./views/404/index.vue')

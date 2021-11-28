@@ -4,5 +4,6 @@ export const api = '/api/v1/blog/'
 
 export const apiMap = {
   articles: 'articles',
-  article: 'article'
+  article: 'article',
+  demos: 'demos'
 }

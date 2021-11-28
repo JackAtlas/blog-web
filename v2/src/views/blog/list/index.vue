@@ -18,7 +18,7 @@
 <script>
   import { fetchList } from '@/api/articles'
   import SiteMain from '@/components/site-main/index.vue'
-import { onMounted } from '@vue/runtime-core'
+  
   export default {
     name: 'blog-list',
     components: { SiteMain },
