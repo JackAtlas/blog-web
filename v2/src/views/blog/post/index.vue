@@ -2,13 +2,16 @@
   <site-main :title="title">
     <div v-if="this.title && this.article.content">
       <div class="meta"><span class="author">{{article.author}}</span><span class="time">{{parseTime(article.time, '{y}-{m}-{d}')}}</span></div>
-      <div class="content markdown-body" ref="content" v-html="article.content"></div>
+      <div class="content markdown-body" ref="content" v-html="content"></div>
     </div>
   </site-main>
 </template>
 
 <script>
+import { marked } from 'marked'
+import hljs from 'highlight.js/lib/common'
 import 'github-markdown-css/github-markdown-light.css'
+import 'highlight.js/styles/vs.css'
 import { getArticle } from '@/api/article.js'
 import { parseTime } from '@/utils/index.js'
 import SiteMain from '@/components/site-main/index.vue'
@@ -52,6 +55,16 @@ export default {
     },
     parseTime(time, cFormat) {
       return parseTime(time, cFormat)
+    }
+  },
+  computed: {
+    content() {
+      return marked(this.article.content, {
+        highlight: (code, lang) => {
+          const language = hljs.getLanguage(lang) ? lang : 'plaintext'
+          return hljs.highlight(code, { language }).value
+        }
+      })
     }
   },
   created() {
