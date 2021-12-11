@@ -61,6 +61,7 @@
 
 <style scoped>
 .list {
+  margin-bottom: 0;
   padding-left: 0;
 }
 

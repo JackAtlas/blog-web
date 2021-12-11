@@ -66,12 +66,29 @@ export default {
   column-gap: 20px;
   padding-left: 0;
 }
+
+@media screen and (max-width: 800px) {
+  .list {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .list {
+    column-count: 1;
+  }
+}
+
 .demo {
   break-inside: avoid;
   list-style: none;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.demo:last-child {
+  margin-bottom: 0;
 }
 
 .demo-title {

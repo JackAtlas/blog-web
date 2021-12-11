@@ -32,7 +32,21 @@
 }
 
 .container {
-  padding: 2em 0 4em;
+  margin: 0 auto;
+  padding: 2em 0;
+  transition: max-width .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
 }
 
 .page-title {
